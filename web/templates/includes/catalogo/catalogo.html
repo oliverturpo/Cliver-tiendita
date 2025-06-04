@@ -4,8 +4,8 @@
         <div class="sectgl prod-i">
             <div class="prod-i-top">
                 <a class="prod-i-img" href="{% url 'web:producto' producto.id %}">
-                    {% if producto.image %}
-                    <img src="{{producto.image.url}}" alt="">
+                    {% if producto.imagen %}
+                    <img src="{{producto.imagen.url}}" alt="">
                     {% else %}
                         <img src="https://placehold.co/400" alt="">
                     {% endif %}

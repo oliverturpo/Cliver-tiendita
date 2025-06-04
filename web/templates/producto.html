@@ -12,8 +12,8 @@
                 <ul class="slides">
                     <li>
                         <a data-fancybox-group="prod" class="fancy-img" href="#">
-                            {% if producto.image %}
-                            <img src="{{producto.image.url}}" alt="">
+                            {% if producto.imagen %}
+                            <img src="{{producto.imagen.url}}" alt="">
                             {% else %}
                                 <img src="https://placehold.co/400" alt="">
                             {% endif %}
@@ -22,8 +22,8 @@
                     </li>
                     <li>
                         <a data-fancybox-group="prod" class="fancy-img" href="#">
-                            {% if producto.image %}
-                            <img src="{{producto.image.url}}" alt="">
+                            {% if producto.imagen %}
+                            <img src="{{producto.imagen.url}}" alt="">
                             {% else %}
                                 <img src="https://placehold.co/400" alt="">
                             {% endif %}
@@ -37,15 +37,15 @@
             <div class="flexslider prod-thumbs" id="prod-thumbs">
                 <ul class="slides">
                     <li>
-                        {% if producto.image %}
-                        <img src="{{producto.image.url}}" alt="">
+                        {% if producto.imagen %}
+                        <img src="{{producto.imagen.url}}" alt="">
                         {% else %}
                             <img src="https://placehold.co/400" alt="">
                         {% endif %}
                     </li>
                     <li>
-                        {% if producto.image %}
-                        <img src="{{producto.image.url}}" alt="">
+                        {% if producto.imagen %}
+                        <img src="{{producto.imagen.url}}" alt="">
                         {% else %}
                             <img src="https://placehold.co/400" alt="">
                         {% endif %}
@@ -72,7 +72,7 @@
                 <p class="prod-excerpt">{{ producto.descripcion}}
                     <a id="prod-showdesc" class="prod-excerpt-more" href="#">read more</a></p>
                 <div class="prod-add">
-                    <form action="#" method="post">
+                    <form action="{% url 'web:agregarCarrito' producto.id %}" method="post">
                         {% csrf_token %}
                         <div class="variations">
                             <div class="variations-row">

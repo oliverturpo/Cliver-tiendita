@@ -15,7 +15,7 @@ class Producto(models.Model):
     descripcion= models.TextField(null= True)
     precio = models.DecimalField(max_digits=9, decimal_places=2)
     fecha_registro = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(upload_to='productos', blank=True)
+    imagen = models.ImageField(upload_to='productos', blank=True)
 
     def __str__(self):
         return self.nombre
